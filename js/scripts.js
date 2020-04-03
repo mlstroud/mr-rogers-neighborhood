@@ -6,7 +6,7 @@ function getOutput(input) {
   }
   else {
     var resultArray = [];
-    var digits = 0;
+    var digits = [];
 
     for (var index = 0; index <= input; index++) {
       var digits = index.toString();
@@ -17,11 +17,13 @@ function getOutput(input) {
       else if (digits.includes("2")) {
         resultArray.push("Boop!");
       }
+      else if (digits.includes("1")) {
+        resultArray.push("Beep!");
+      }
       else {
         resultArray.push(index);
       }
     }
-
   }
 
   result = resultArray.join(", ");
