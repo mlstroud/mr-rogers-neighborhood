@@ -5,16 +5,22 @@ body {
 #result {
   padding: 20px;
   margin: 20px;
-  display: none;
-  text-align: center;
+  text-align: left;
   box-shadow: 2px 2px 2px #36393D;
+  background-color: #EEEEEE;
+  font-weight: bold;
+  background-color: #EEEEEE;
+}
+
+#result-box {
+  display: none;
 }
 
 .content {
   padding: 20px;
   margin: 20px;
   text-align: left;
-  background-color: #FFFFFF;
+  background-color: #CDEB8B;
   box-shadow: 2px 2px 2px #36393D;
 }
 
@@ -30,9 +36,10 @@ body {
 }
 
 .title-text {
-  color: orange !important;
+  color: #CDEB8B !important;
   font-weight: bold;
-  text-shadow: 1px 1px 3px #36393D;
+  text-shadow: 3px 3px 3px #36393D;
+  text-decoration: underline;
 }
 
 .form-box {
@@ -40,12 +47,10 @@ body {
   width: 50%;
   padding: 20px;
   margin: 10px;
-  border-style: solid;
-  border-width: 1;
-  border-color: black;
-  background-color: #356AA0;
+  background-color: #EEEEEE;
   height: 350px;
-  color: white;
+  color: #356AA0;
+  box-shadow: 2px 2px 2px #36393D;
 }
 
 input {
@@ -57,12 +62,10 @@ input {
   width: 40%;
   margin: 10px;
   padding: 20px;
-  border-style: solid;
-  border-width: 1;
-  border-color: black;
-  background-color: #356AA0;
+  background-color: #EEEEEE;
   height: 350px;
-  color: white;
+  color: #356AA0;
+  box-shadow: 2px 2px 2px #36393D;
 }
 
 .box-title {

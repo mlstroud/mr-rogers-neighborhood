@@ -65,15 +65,15 @@ $(document).ready(function() {
 
     if(formSubmitted === true) {
       $("#result").fadeOut('slow', function() {
-        $("#result").text("");
-        $("#result").text(result);
+        $("#display-result").text("");
+        $("#display-result").text(result);
       });
 
       $("#result").fadeIn('s');
     }
     else {
-      $("#result").text(result);
-      $("#result").fadeIn();
+      $("#display-result").text(result);
+      $("#result-box").fadeIn();
       formSubmitted = true;
     }
     event.preventDefault();
