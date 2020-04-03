@@ -1,12 +1,18 @@
 function getOutput(input) {
-  return input;
+  var result = "";
+
+  if (isNaN(input)) {
+    result = "Error, not a number.";
+  }
+
+  return result;
 };
 
 
 $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
-    var input = $("#input-number").val();
+    var input = parseInt($("#input-number").val());
     var output = getOutput(input);
   
     $("#result").text(output);
