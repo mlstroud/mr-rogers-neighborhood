@@ -1,43 +1,41 @@
-function getOutput(input) {
-  var result = "";
+function getOutput(inputNumber) {
 
-  if (isNaN(input)) {
+  if (isNaN(inputNumber)) {
     return "Error, not a number.";
   }
   else {
-    var resultArray = [];
+    var result = [];
     var digits = [];
 
-    for (var index = 0; index <= input; index++) {
-      var digits = index.toString();
+    for (var currentNumber = 0; currentNumber <= inputNumber; currentNumber++) {
+      var digits = currentNumber.toString();
 
       if(digits.includes("3")) {
-        resultArray.push("Won't you be my neighbor?");
+        result.push("Won't you be my neighbor?");
       }
       else if (digits.includes("2")) {
-        resultArray.push("Boop!");
+        result.push("Boop!");
       }
       else if (digits.includes("1")) {
-        resultArray.push("Beep!");
+        result.push("Beep!");
       }
       else {
-        resultArray.push(index);
+        result.push(currentNumber);
       }
     }
   }
 
-  result = resultArray.join(", ");
-  return result;
+  return result.join(", ");
 };
 
 
 $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
-    var input = parseInt($("#input-number").val());
-    var output = getOutput(input);
+    var userInput = parseInt($("#input-number").val());
+    var result = getOutput(userInput);
   
-    $("#result").text(output);
+    $("#result").text(result);
     event.preventDefault();
   });
 });
