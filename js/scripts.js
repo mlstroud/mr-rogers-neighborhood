@@ -6,12 +6,16 @@ function getInput(returnType) {
 
   userInput.push(parseInt($("#input-number").val()));
   userInput.push($("#input-name").val());
+  userInput.push($("input[name=direction]:checked").val());
 
   if(returnType === "number") {
     return userInput[0];
   }
   else if(returnType === "name") {
     return userInput[1];
+  }
+  else if(returnType === "direction") {
+    return userInput[2];
   }
   else {
     return "Error, could not retrieve data.";
@@ -58,10 +62,10 @@ $(document).ready(function() {
 
     var userNumber = getInput("number");
     var userName = getInput("name");
+    var direction = getInput("direction");
     var result = getOutput(userNumber, userName);
 
-    console.log("Number: " + userNumber);
-    console.log("Name: " + userName);
+    alert(direction);
 
     if(formSubmitted === true) {
       $("#result").fadeOut('slow', function() {

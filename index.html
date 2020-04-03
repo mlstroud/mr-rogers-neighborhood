@@ -16,25 +16,31 @@
       <div class="row">
         <div class="col-md-12">
           <div class="well content">
-            <div class="form-box">
-              <h2 class="box-title">Input</h2>
-              <div class="form-group">
-                <form id="get-number">
-                  <label for="number">Enter a  number: </label>
-                  <br>
-                  <input type="text" id="input-number" name="number" placeholder="123" class="input-field">
-                  <br>
-                  <label for="input-name">Enter your name:</label>
-                  <br>
-                  <input type="text" id="input-name" name="name" placeholder="John Smith" class="input-field">
-                  <br><br>
-                  <button class="btn btn-primary"><strong>Get Results</strong></button>
-                </form>
+            <form id="get-number">
+              <div class="form-box">
+                <h2 class="box-title">Input</h2>
+                <div class="form-group">
+                    <label for="number">Enter a  number: </label>
+                    <br>
+                    <input type="text" id="input-number" name="number" placeholder="123" class="input-field">
+                    <br>
+                    <label for="input-name">Enter your name:</label>
+                    <br>
+                    <input type="text" id="input-name" name="name" placeholder="John Smith" class="input-field">
+                    <br><br>
+                    <button class="btn btn-primary"><strong>Get Results</strong></button>
+                </div>
               </div>
-            </div>
-            <div class="options">
-              <h2 class="box-title">Options</h2>
-            </div>
+              <div class="options">
+                <h2 class="box-title">Options</h2>
+                  <input type="radio" id="normal" name="direction" value="normal" checked>
+                  &nbsp;&nbsp;
+                  <label for="normal">Normal</label><br>
+                  <input type="radio" id="reverse" name="direction" value="reverse">
+                  &nbsp;&nbsp;
+                  <label for="reverse">Reverse</label>
+              </div>
+            </form>
           </div>
         </div>
       </div>
