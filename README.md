@@ -14,6 +14,15 @@ _With the following exceptionsl, from least to most important:_
 
 ## Specs
 
+| Behavior                                                                                          | Input   | Output                                           |
+|:--------------------------------------------------------------------------------------------------|:-------:|-------------------------------------------------:|
+| The program returns an error if the input is not a number.                                        | "Hello" | Error                                            |
+| The program returns a range of numbers from 0 to the users inputted number.                       | 4       | 0,1,2,3,4                                        |
+| The program returns "Won't you be my neighbor?" instead of the current number if it contains a 3. | 3       | 0, 1, 2, "Won't you be my neighbor?"             |
+| The program returns "Boop!" instead of the current number if it contains a 2.                     | 5       | 0, 1, "Boop!", "Won't you be my Neighbor?", 4, 5 |
+| The program returns "Beep!" instead of the current number if it contains a 1.                     | 2       | 0, "Beep!", "Boop!"                              |
+| The program clears all displayed results whenever the user enters another number.                 | 1 -> 2  | 0, "Beep!" -> 0, "Beep!", "Boop!"                |
+
 ## Setup/Installation Requirements
 
 * Clone this repository.
