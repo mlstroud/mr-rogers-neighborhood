@@ -5,17 +5,23 @@ function getOutput(input) {
     result = "Error, not a number.";
   }
   else {
-    
-    var digits = input.toString();
-    var parsedDigits = [];
+    var resultArray = [];
+    var digits = 0;
 
-    for (var index = 0; index < digits.length; index++) {
-      parsedDigits.push(digits[index]);
+    for (var index = 0; index <= input; index++) {
+      var digits = index.toString();
+
+      if(digits.includes("3")) {
+        resultArray.push("Won't you be my neighbor?");
+      }
+      else {
+        resultArray.push(index);
+      }
     }
 
   }
 
-  result = parsedDigits.join();
+  result = resultArray.join();
   return result;
 };
 
