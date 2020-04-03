@@ -1,13 +1,24 @@
 
 // BUSINESS LOGIC ====================================================================
 
-function getInput() {
-  var userInput = parseInt($("#input-number").val());
+function getInput(returnType) {
+  var userInput = [];
 
-  return userInput;
+  userInput.push(parseInt($("#input-number").val()));
+  userInput.push($("#input-name").val());
+
+  if(returnType === "number") {
+    return userInput[0];
+  }
+  else if(returnType === "name") {
+    return userInput[1];
+  }
+  else {
+    return "Error, could not retrieve data.";
+  }
 };
 
-function getOutput(inputNumber) {
+function getOutput(inputNumber, inputName) {
 
   if (isNaN(inputNumber)) {
     return "Error, not a number.";
@@ -45,8 +56,12 @@ $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
 
-    var userInput = getInput();
-    var result = getOutput(userInput);
+    var userNumber = getInput("number");
+    var userName = getInput("name");
+    var result = getOutput(userNumber, userName);
+
+    console.log("Number: " + userNumber);
+    console.log("Name: " + userName);
 
     if(formSubmitted === true) {
       $("#result").fadeOut('slow', function() {
