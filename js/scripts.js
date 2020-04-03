@@ -1,3 +1,6 @@
+
+// BUSINESS LOGIC ====================================================================
+
 function getInput() {
   var userInput = parseInt($("#input-number").val());
 
@@ -34,9 +37,11 @@ function getOutput(inputNumber) {
   return result.join(", ");
 };
 
-var formSubmitted = false;
+// USER INTERFACE ====================================================================
 
 $(document).ready(function() {
+
+  var formSubmitted = false;
 
   $("#get-number").submit(function(event) {
 
