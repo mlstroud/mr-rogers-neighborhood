@@ -1,3 +1,9 @@
+function getInput() {
+  var userInput = parseInt($("#input-number").val());
+
+  return userInput;
+};
+
 function getOutput(inputNumber) {
 
   if (isNaN(inputNumber)) {
@@ -28,11 +34,10 @@ function getOutput(inputNumber) {
   return result.join(", ");
 };
 
-
 $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
-    var userInput = parseInt($("#input-number").val());
+    var userInput = getInput();
     var result = getOutput(userInput);
   
     $("#result").text(result);
