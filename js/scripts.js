@@ -4,7 +4,18 @@ function getOutput(input) {
   if (isNaN(input)) {
     result = "Error, not a number.";
   }
+  else {
+    
+    var digits = input.toString();
+    var parsedDigits = [];
 
+    for (var index = 0; index < digits.length; index++) {
+      parsedDigits.push(digits[index]);
+    }
+
+  }
+
+  result = parsedDigits.join();
   return result;
 };
 
