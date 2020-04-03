@@ -22,7 +22,7 @@ function getInput(returnType) {
   }
 };
 
-function getOutput(inputNumber, inputName) {
+function getOutput(inputNumber, inputName, inputDirection) {
 
   if (isNaN(inputNumber)) {
     return "Error, not a number.";
@@ -43,13 +43,23 @@ function getOutput(inputNumber, inputName) {
       else if (digits.includes("1")) {
         result.push("Beep!");
       }
+      else if (currentNumber % 3 === 0) {
+
+
+      }
       else {
         result.push(currentNumber);
       }
     }
   }
 
-  return result.join(", ");
+  if(inputDirection === "normal") {
+    return result.join(", ");
+  }
+  else {
+    result.reverse();
+    return result.join(", ");
+  }
 };
 
 // USER INTERFACE ====================================================================
@@ -63,9 +73,7 @@ $(document).ready(function() {
     var userNumber = getInput("number");
     var userName = getInput("name");
     var direction = getInput("direction");
-    var result = getOutput(userNumber, userName);
-
-    alert(direction);
+    var result = getOutput(userNumber, userName, direction);
 
     if(formSubmitted === true) {
       $("#result").fadeOut('slow', function() {

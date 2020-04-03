@@ -23,6 +23,11 @@ _With the following exceptions, from least to most important:_
 | The program returns "Beep!" instead of the current number if it contains a 1.                     | 2       | 0, "Beep!", "Boop!"                                   |
 | The program clears all displayed results whenever the user enters another number.                 | 1 -> 2  | 0, "Beep!" -> 0, "Beep!", "Boop!"                     |
 | The program inserts the user's name to the result if the number is divisible by 3.                | 3       | 0, "Beep!", "Boop!", "Won't you be my neighbor, Dana? |
+| The program reverses the output if user selects the appropriate option.                           | 2       | "Boop!", 1, 0                                         |
+
+## Known Bugs
+
+* inserting user's name into the output not currently implemented.
 
 ## Setup/Installation Requirements
 
