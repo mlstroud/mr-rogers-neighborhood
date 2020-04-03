@@ -81,11 +81,11 @@ $(document).ready(function() {
         $("#display-result").text(result);
       });
 
-      $("#result").fadeIn('s');
+      $("#result").fadeIn('slow');
     }
     else {
       $("#display-result").text(result);
-      $("#result-box").fadeIn();
+      $("#result-box").slideDown();
       formSubmitted = true;
     }
     event.preventDefault();

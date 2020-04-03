@@ -68,10 +68,6 @@ input {
   box-shadow: 2px 2px 2px #36393D;
 }
 
-.box-title {
-  padding: 20px;
-}
-
-.form-group {
+.box-title, .form-group {
   padding: 20px;
 }
