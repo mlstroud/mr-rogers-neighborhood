@@ -34,6 +34,7 @@ function getOutput(inputNumber) {
   return result.join(", ");
 };
 
+
 $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
