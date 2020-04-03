@@ -2,7 +2,7 @@ function getOutput(input) {
   var result = "";
 
   if (isNaN(input)) {
-    result = "Error, not a number.";
+    return "Error, not a number.";
   }
   else {
     var resultArray = [];
@@ -14,6 +14,9 @@ function getOutput(input) {
       if(digits.includes("3")) {
         resultArray.push("Won't you be my neighbor?");
       }
+      else if (digits.includes("2")) {
+        resultArray.push("Boop!");
+      }
       else {
         resultArray.push(index);
       }
@@ -21,7 +24,7 @@ function getOutput(input) {
 
   }
 
-  result = resultArray.join();
+  result = resultArray.join(", ");
   return result;
 };
 
