@@ -1,20 +1,20 @@
 
 // BUSINESS LOGIC ====================================================================
 
-function getInput(returnType) {
+function getInput(inputType) {
   var userInput = [];
 
   userInput.push(parseInt($("#input-number").val()));
   userInput.push($("#input-name").val());
   userInput.push($("input[name=direction]:checked").val());
 
-  if(returnType === "number") {
+  if(inputType === "number") {
     return userInput[0];
   }
-  else if(returnType === "name") {
+  else if(inputType === "name") {
     return userInput[1];
   }
-  else if(returnType === "direction") {
+  else if(inputType === "direction") {
     return userInput[2];
   }
   else {
@@ -43,12 +43,12 @@ function getOutput(inputNumber, inputName, inputDirection) {
       else if (digits.includes("1")) {
         result.push("Beep!");
       }
-      else if (currentNumber % 3 === 0) {
-
-
-      }
       else {
         result.push(currentNumber);
+      }
+
+      if (currentNumber % 3 === 0) {
+
       }
     }
   }
