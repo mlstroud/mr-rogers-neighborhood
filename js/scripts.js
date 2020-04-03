@@ -34,14 +34,28 @@ function getOutput(inputNumber) {
   return result.join(", ");
 };
 
+var formSubmitted = false;
 
 $(document).ready(function() {
 
   $("#get-number").submit(function(event) {
+
     var userInput = getInput();
     var result = getOutput(userInput);
-  
-    $("#result").text(result);
+
+    if(formSubmitted === true) {
+      $("#result").fadeOut('slow', function() {
+        $("#result").text("");
+        $("#result").text(result);
+      });
+
+      $("#result").fadeIn('s');
+    }
+    else {
+      $("#result").text(result);
+      $("#result").fadeIn();
+      formSubmitted = true;
+    }
     event.preventDefault();
   });
 });
