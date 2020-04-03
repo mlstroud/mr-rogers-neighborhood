@@ -7,7 +7,7 @@
 
 _An independent project from Epicodus._  
 _This application takes a number as input, and displays a list of numbers from 0 to the number_  
-_With the following exceptionsl, from least to most important:_  
+_With the following exceptions, from least to most important:_  
 * _Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"_  
 * _Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"_  
 * _Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"_
