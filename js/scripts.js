@@ -48,7 +48,7 @@ function getOutput(inputNumber, inputName, inputDirection) {
       }
 
       if (currentNumber % 3 === 0) {
-
+        // Implement spec for inserting name into sentence.
       }
     }
   }
