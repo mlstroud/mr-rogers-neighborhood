@@ -12,6 +12,7 @@ body {
   background-color: #EEEEEE;
   font-weight: bold;
   background-color: #EEEEEE;
+  color: #356AA0;
 }
 
 #result-box {
@@ -27,7 +28,7 @@ body {
   background-image: url("../img/background.png");
 }
 
-.content::after {
+.content::after, #result::after {
   content: "";
   clear: both;
   display: table;
@@ -36,6 +37,7 @@ body {
 img {
   height: 125px;
   margin-right: 2%;
+  margin-left: 2%;
 }
 
 .jumbotron {
@@ -49,7 +51,14 @@ img {
   color: #36393D !important;
   font-weight: bold;
   text-shadow: 3px 3px 3px #36393D;
-  text-decoration: underline;
+}
+
+.roboger-img {
+  float: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 2px 2px 5px #36393D;
 }
 
 .form-box {
